@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Smart -school
+                    Smart - school
                 </div>
 
               
