@@ -29,7 +29,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Smart - school 555
+                    Smart - school
                 </div>
 
               
