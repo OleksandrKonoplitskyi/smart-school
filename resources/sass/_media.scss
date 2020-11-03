@@ -1,0 +1,88 @@
+// Styles only for ME
+@supports (-ms-ime-align:auto) {
+}
+
+// Styles only for Firefox
+@-moz-document url-prefix() {
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+	.content img[style*="float"] {
+		float: none !important;
+		display: block;
+		max-width: 100%;
+		margin: 0 auto 2rem !important;
+	}
+	.content img[style*="float"][style*=" right"] {
+		margin: 0 auto 2rem !important;
+		text-align: center;
+	}
+	.content img[style*="float"][style*=" left"] {
+		margin: 0 auto 2rem !important;
+		text-align: center;
+	}
+	.content p[style*="float"] {
+		float: none !important;
+		display: block;
+		max-width: 100%;
+		margin: 1rem auto !important;
+	}
+	.content p[style*="float"][style*=" right"] {
+		margin: 1rem auto !important;
+		text-align: center;
+	}
+	.content p[style*="float"][style*=" left"] {
+		margin: 1rem auto !important;
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 480px) {
+}
+
+@media only screen and (max-width: 550px) {
+}
+
+
+
+@media (min-width: 992px) {
+	.button {
+		&:hover {
+			background: $btn_1_back_h;
+			color: $btn_1_color_h;
+			border-color: $btn_1_b_color_h;
+
+		}
+
+		&.light {
+			&:hover {
+				background: $btn_2_back_h;
+				color: $btn_2_color_h;
+				border-color: $btn_2_b_color_h;
+			}
+		}
+
+		&.light_2 {
+			&:hover {
+				background: $btn_3_back_h;
+				color: $btn_3_color_h;
+				border-color: $btn_3_b_color_h;
+			}
+		}
+
+		&.black {
+			&:hover {
+				background: $btn_4_back_h;
+				color: $btn_4_color_h;
+				border-color: $btn_4_b_color_h;
+			}
+		}
+	}
+	.modal_success .button:hover {
+		background: $btn_1_back_h;
+		border: .1rem solid $btn_1_b_color_h;
+		color: $btn_1_color_h;
+	}
+}
+
+@media (orientation: landscape) and (max-height: 450px) {}

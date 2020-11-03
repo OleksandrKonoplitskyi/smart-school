@@ -1,0 +1,117 @@
+.timeline_page {
+    background-color: $main;
+    padding-top: 1.5rem;
+
+    p {
+        margin: 0;
+    }
+
+    .timeline_wrap {
+        position: relative;
+        padding: 0 1.5rem 0 5.5rem;
+        margin: 0 auto;
+
+        .arrow_back {
+            position: absolute;
+            top: 0;
+            left: 1.2rem;
+
+            .icon {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+        }
+    }
+
+    .timeline_list {
+        p {
+            font-size: 1.2rem;
+
+            &.timeline_subtitle {
+                font-family: $fontB;
+                font-size: 1.6rem;
+                margin: 0 0 1rem;
+            }
+        }
+
+        .timeline_desc {
+            margin: 3rem 0 0;
+            padding: 0 0 0 5rem;
+
+            li {
+                position: relative;
+                margin: 0 0 2.5rem;
+
+                &:last-child {
+                    &::before {
+                        height: calc(100% - 2rem);
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: -3.6rem;
+                    top: 2.4rem;
+                    height: calc(100% - 0.5rem);
+                    width: 1rem;
+                    background-image: radial-gradient(circle at center, $white 0, $white .2rem, transparent .2rem, transparent 100%);
+                    background-repeat: round;
+                    background-position: left top;
+                    background-size: 1rem 1rem;
+                }
+
+                .icons_wrap {
+                    position: absolute;
+                    top: -0.5rem;
+                    left: -4.5rem;
+                }
+            }
+        }
+
+        .timeline_item {
+            .task_icon {
+                width: 2.8rem;
+                height: 2.8rem;
+            }
+
+            .icon_completed {
+                display: none;
+                color: $dark;
+            }
+
+            &.task_completed {
+                .icon_completed {
+                    display: block;
+                }
+
+                .icon_uncompleted {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.parents_timeline_page {
+    background-color: $red2;
+
+
+        .timeline_wrap {
+            padding: 0 1.5rem 0 1rem;
+        }
+
+    .timeline_list {
+        p, h1 {
+            &.timeline_title {
+                padding-left: 4rem;
+
+                &::after {
+                    left: 4.5rem;
+                }
+            }
+        }
+    }
+
+
+}

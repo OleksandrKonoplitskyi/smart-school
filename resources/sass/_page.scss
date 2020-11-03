@@ -1,0 +1,391 @@
+.nav_page {
+    padding: 0 0 9.3rem;
+    position: relative;
+
+    .pre_footer {
+        background-repeat: no-repeat;
+        background-position: 0 -moz-calc(100% - 6.3rem);
+        background-size: 100% 7rem;
+        padding: 7rem 0 0;
+        position: absolute;
+        bottom: 6.3rem;
+        left: 0;
+        width: 100%;
+    }
+
+}
+
+.date_block_wrap {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 21%;
+    position: relative;
+    padding: 5rem 2.5rem 6rem;
+
+    .notification_block {
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        text-align: center;
+
+        .icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            color: $white;
+            margin: 0 0 .4rem;
+        }
+
+        p {
+            color: $white;
+            margin: 0;
+            line-height: 1;
+            font-size: 1.2rem;
+        }
+    }
+
+    .date_block {
+        text-align: center;
+        position: relative;
+
+        .date_item {
+            position: relative;
+            margin: 0;
+            font-family: $font;
+            font-weight: 400;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -1.1rem;
+                left: 50%;
+                transform: translateX(-50%);
+                display: block;
+                width: 8rem;
+                height: .3rem;
+                background-image: linear-gradient(to right, #5cb8ff 0%, #ffe352 100%);
+            }
+        }
+
+        .date_arrow {
+            display: block;
+            position: absolute;
+            color: #ffffff;
+            width: 3rem;
+            height: 3rem;
+            top: 50%;
+            vertical-align: middle;
+            border: 0 solid;
+            border-width: 0 .3rem .3rem 0;
+
+            &.prev_date {
+                left: 0;
+                transform: translateY(-50%)rotate(135deg);
+            }
+
+            &.next_date {
+                right: 0;
+                transform: translateY(-50%)rotate(-45deg);
+            }
+        }
+
+        span {
+            color: $white;
+            display: block;
+            font-size: 3rem;
+            line-height: 1;
+
+            &.large {
+                font-size: 6rem;
+                line-height: 1;
+            }
+        }
+    }
+
+    &.urgent {
+        .urgent_message {
+            display: block;
+        }
+    }
+
+    .urgent_message {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: $red2;
+
+        .urgent_text {
+            position: absolute;
+            top: calc(50% - 1rem);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+
+            .icon {
+                color: $white;
+                width: 3.5rem;
+                height: 3.5rem;
+                margin: 0 0 1rem;
+            }
+
+            p {
+                font-size: 3rem;
+                margin: 0;
+                color: $white;
+            }
+        }
+
+
+    }
+}
+
+.card_wrap {
+    margin-top: -3rem;
+    padding: 2rem;
+    border-radius: 3rem;
+    background: $white;
+    position: relative;
+    z-index: 5;
+
+    .card_heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 0 2.5rem;
+
+        .today_item {
+            margin: 0 1.5rem 0 1.5rem;
+            display: flex;
+            align-items: center;
+
+            .icon {
+                color: $main_dark;
+                height: 1.6rem;
+                width: 1.6rem;
+                margin: 0 .5rem 0 0;
+            }
+
+            span {
+                color: $main_dark;
+                font-size: 1.3rem;
+                font-weight: 700;
+            }
+        }
+
+        .homeworks_item {
+            .button{
+                font-size: 1.3rem;
+                padding: 0.988em 1.4em  0.988em;
+            }
+        }
+    }
+
+    .card {
+        background-color: $greenLight;
+        border-radius: 3rem;
+        padding: 1rem 1rem 0.5rem;
+        margin: 0 0 1rem;
+    }
+
+    .card_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem 0 3rem;
+
+        span {
+            color: $main_dark;
+            font-weight: 600;
+            font-size: 1.4rem;
+            &.small {
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .card_items {
+        counter-reset: card_items;
+
+        .card_item {
+            position: relative;
+            background-color: $white;
+            padding: 1.2rem 6.4rem 1.2rem 4.2rem;
+            margin: .7rem 0;
+            border-radius: 2rem;
+
+            &.active {
+                padding: 1.2rem 1rem 1.2rem 4.2rem;
+
+                .card_item_name {
+                    margin: 0 0 2rem;
+
+                    &::before {
+                        top: auto;
+                        bottom: -2.3rem;
+                        transform: none;
+                        background-color: $main;
+                        color: $white;
+                    }
+
+                    &::after {
+                        display: block;
+                    }
+                }
+
+                .card_item_desc {
+                    display: block;
+                }
+
+                .card_item_mark {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+
+            }
+
+            .card_item_name {
+                position: relative;
+
+                &::before {
+                    content: counter(card_items);
+                    counter-increment: card_items;
+                    position: absolute;
+                    top: 50%;
+                    left: -3.3rem;
+                    transform: translateY(-50%);
+                    display: block;
+                    width: 2.7rem;
+                    height: 2.7rem;
+                    line-height: 2.4rem;
+                    text-align: center;
+                    border-radius: 50%;
+                    border: 0.2rem solid $main;
+                    background-color: $white;
+                    color: $main;
+                    font-size: 1.2rem;
+                    padding-right: 0.1rem;
+                    font-weight: 700;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -1rem;
+                    left: -0.6rem;
+                    display: none;
+                    width: 100%;
+                    height: .3rem;
+                    background-color: $greenLight;
+                }
+
+                p {
+                    font-family: $fontB;
+                    margin: 0;
+                    line-height: 1.1;
+                    font-size: 1.2rem;
+                }
+            }
+
+            .card_item_mark {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 6rem;
+                height: 100%;
+                display: block;
+                border-radius: 0 1.5rem 1.5rem 0;
+                text-align: center;
+
+                &.high_level {
+                    background-color: #2078bb;
+                }
+
+                &.sufficient_level {
+                    background-color: #2694ea;
+                }
+
+                &.average_level {
+                    background-color: #81d238;
+                }
+
+                &.initial_level {
+                    background-color: #ff5c5c;
+                }
+
+                span {
+                    font-family: $fontB;
+                    color: $white;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            .card_item_desc {
+                display: none;
+                text-align: justify;
+                position: relative;
+                font-size: 0;
+
+
+
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 100%;
+                    font-size: 0;
+
+                }
+
+                .card_item_text {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: calc(100% - 2.8rem);
+
+                    p {
+                        font-size: 1.2rem;
+                        line-height: 1.3;
+                        font-family: $fontB;
+                        margin: 0;
+                        color: $main_dark;
+                        text-align: left;
+                    }
+                }
+
+
+
+                .icon {
+                    display: inline-block;
+                    vertical-align: top;
+                    color: $main_dark;
+                    height: 2rem;
+                    width: 2rem;
+
+                    &.completed {
+                        color: $dark;
+                    }
+                }
+            }
+        }
+    }
+
+    .card_comments {
+
+        p {
+            font-family: $fontB;
+            margin: 0;
+            font-size: 1.2rem;
+
+            &.comment_heading {
+                color: $main_dark;
+                font-size: 1.4rem;
+                margin: 0 0 1rem;
+            }
+        }
+    }
+}
+

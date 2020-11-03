@@ -1,19 +1,101 @@
-// Body
-$body-bg: #f8fafc;
+$font:          'SF UI Display Regular';
+$fontB:         'SF UI Display Bold';
 
-// Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
 
-// Colors
-$blue: #3490dc;
-$indigo: #6574cd;
-$purple: #9561e2;
-$pink: #f66d9b;
-$red: #e3342f;
-$orange: #f6993f;
-$yellow: #ffed4a;
-$green: #38c172;
-$teal: #4dc0b5;
-$cyan: #6cb2eb;
+$cb:              #000000;
+$dark:            #bdff81;
+$main:            #5cb8ff;
+$main_dark:       #929292;
+$yellow:          #f3b01c;
+$white:           #ffffff;
+$grey:            #f5f5f5;
+$greyDark:        #8c8c8c;
+$greyLight:       #f2f2f2;
+$greyBg:          rgb(245, 245, 245);
+$c1:              #00aeab;
+$c2:              #4A6572;
+$green:           #006b25;
+$greenLight:      #f7f7f7;
+$p:               $cb;
+$red:             #e31e26;
+$red2:            #cc1a59;
+$violet:          #6e4cad;
+$blue:            #1c207e;
+$blueDark:        #021f56;
+
+$title:           $cb;
+
+$mainText:        $cb;
+$none:            inherit;
+
+$inputColor:      $cb;
+$inputBack:       #f7f7f7;
+$inputBorder:     #f7f7f7;
+$inputRad:        6.3rem;
+$placeholderColor: #8c8c8c;
+
+$btnRad:          1.7125em;
+$btn_1_color:     $white;
+$btn_1_back:      $main;
+$btn_1_b_color:   $main;
+$btn_1_b_rad:     0;
+
+$btn_1_color_h:   $white;
+$btn_1_back_h:    $dark;
+$btn_1_b_color_h: $dark;
+$btn_1_b_rad_h:   0;
+
+$btn_2_color:     $main;
+$btn_2_back:      $white;
+$btn_2_b_color:   $white;
+$btn_2_b_rad:     0;
+
+$btn_2_color_h:   $white;
+$btn_2_back_h:    $main;
+$btn_2_b_color_h: $main;
+$btn_2_b_rad_h:   0;
+
+$btn_3_color:     $dark;
+$btn_3_back:      $white;
+$btn_3_b_color:   $white;
+$btn_3_b_rad:     0;
+
+$btn_3_color_h:   $white;
+$btn_3_back_h:    $dark;
+$btn_3_b_color_h: $white;
+$btn_3_b_rad_h:   0;
+
+$btn_4_color:     $white;
+$btn_4_back:      $main_dark;
+$btn_4_b_color:   $main_dark;
+$btn_4_b_rad:     0;
+
+$btn_4_color_h:   $main_dark;
+$btn_4_back_h:    $white;
+$btn_4_b_color_h: $white;
+$btn_4_b_rad_h:   0;
+
+$toastError:      rgba(237, 28, 36, .8);
+$toastSuccess:    rgba(28, 32, 126, .8);
+
+$footerBg:        $cb;
+
+$modalWidthXL:    65vw;
+$modalWidthL:     85rem;
+$modalWidth:      60rem;
+$modalWidthS:     40rem;
+$modalWidthXS:    30rem;
+$modalBg:         #ffffff;
+$modalBorder:     $dark;
+
+$wrapWidth:       119rem;
+
+$nav_btn_line:    $dark;
+$nav_btn_color:   $dark;
+
+$padding_body:    14.4rem;
+
+$gutter:          1.5rem;
+$gutter-:         -1.5rem;
+$gutter2:         $gutter + $gutter;
+$zero:            0;
